@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        margin: 0;
+      }
+      .container .image-wapper img{
+        /* background: url(./login-bg.png); */
+        max-width: 100%;
+      }
+      .email-icon {
+        content: url(./user_icon.svg);
+      }
+      .password-icon {
+        content: url(./password_icon.svg);
+      }
+      .google {
+        content: url(./google_icon.svg);
+      }
+      .facebook {
+        content: url(./facebook_icon.svg);
+      }
+      .twitter {
+        content: url(./twitter_icon.svg);
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .form-wapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        padding: 73px 155px;
+        height: fit-content;
+      }
+      .form-body, .form-body form{
+        display: grid;
+        grid-gap: 40px;
+      }
+      .input-wrapper {
+        display: grid;
+        grid-template-columns: 35px 1fr;
+        column-gap: 33px;
+        align-items: end;
+      }
+      .input-wrapper input{
+        border: 0;
+        border-bottom: 1px solid;
+      }
+      .input-wrapper.more-action {
+        grid-template-columns: 1fr;
+        align-items: center;
+      }
+      .form-link {
+        display: grid;
+        justify-content: end;
+        text-decoration: none;
+        font-size: 16px;
+        color: #00000099;
+      }
+      .form-footer p{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        column-gap: 130px;
+        grid-template-columns: auto auto;
+      }
+      .or-wrapper {
+        position: relative;
+      }
+      .or{
+        border: 1px solid #B1A8A8;
+        padding: 10px 8px;
+        position: absolute;
+        top: -9px;
+        left: 50%;
+        font-size: 11px;
+        background: #fff;
+      }
+      .btn-login {
+        height: 63px;
+        color: #fff;
+        background: #704232;
+        border-radius: 16px;
+        box-shadow: 1px 7px 4px -2px rgb(0 0 0 / 25%);
+        border: 1px solid #000000;
+        cursor: pointer;
+      }
+      .social-icon {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 45px;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-wapper">
+        <img src="./login-bg.png">
+      </div>
+      <div class="form-wapper">
+        <div class="form-header">
+          <h2 style="font-size: 40px">BF</h2>
+          <h4 style="font-size: 32px">
+            Login
+          </h4>
+        </div>
+        <div class="form-body">
+          <form>
+            <div class="input-wrapper">
+              <span class="email-icon"></span>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email or Phone"
+              />
+            </div>
+            <div class="input-wrapper">
+              <span class="password-icon"></span>
+              <input
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="input-wrapper more-action">
+              <a class="form-link" href="./auth-forgot-password.html"
+                >Forgot Password?</a
+              >
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+          </form>
+        </div>
+        <div class="or-wrapper">
+          <hr>
+          <span class="or">OR</span>
+        </div>
+        <div class="social-icon">
+          <a href="#"><span class="google"></span></a>
+          <a href="#"><span class="facebook"></span></a>
+          <a href="#"><span class="twitter"></span></a>
+        </div>
+        <div class="form-footer">
+          <p>
+            Don't have an account yet?
+            <a class="form-link" href="./auth-register.html">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
